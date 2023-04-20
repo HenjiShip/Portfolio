@@ -11,6 +11,7 @@ const App = () => {
     { id: "contact", component: <Contact /> },
   ];
 
+  // set element id when scrolling for highlighted navbar
   const [activePageId, setActivePageId] = useState(pages[0].id);
   const observerRefs = useRef([]);
 
@@ -24,7 +25,7 @@ const App = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.7,
+      threshold: 0.5,
     });
 
     pages.forEach((page) => {
@@ -43,6 +44,7 @@ const App = () => {
     <div>
       <Navbar observerRefs={observerRefs} activePageId={activePageId} />
       <div>
+        {/* set loading screen on the page if they're not loaded yet */}
         <Suspense fallback={<Loading />}>
           {pages.map((page) => (
             <div

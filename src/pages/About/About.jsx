@@ -3,8 +3,8 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div className="flex-1 pl-52 pt-[200px] pr-10 max-lg:p-10">
-        <div className="bg-yellow-200 p-[100px] rounded-xl h-[500px] font-col text-black">
+      <div className="flex-1 pl-52 pt-[200px] pr-10 max-lg:p-10 max-sm:pt-[50px] max-sm:pl-[10px] max-sm:pr-[10px]">
+        <div className="bg-yellow-200 p-[100px] rounded-xl h-[500px] font-col text-black max-sm:p-[10px]">
           <h1 className="text-6xl font-bold mb-4">About</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
@@ -18,7 +18,7 @@ const About = () => {
             blandit lobortis.
           </p>
         </div>
-        <div className="h-[620px]"></div>
+        <div className="h-[500px]"></div>
       </div>
     </div>
   );

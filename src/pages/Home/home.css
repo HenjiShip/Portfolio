@@ -1,0 +1,41 @@
+.canvas {
+    display: block;
+}
+
+.moon {
+    position: absolute;
+    right: 15%;
+    background-color: #edebc0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 640px) {
+    .canvas {
+        height: 250px !important;
+        top: 150px;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .moon {
+        height: 125px;
+        width: 125px;
+        top: 225px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+    .canvas {
+        height: 600px !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .canvas {
+        height: 800px !important;
+    }
+}
