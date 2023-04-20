@@ -22,7 +22,12 @@ const Room = () => {
       <spotLight position={[-3, 10, -7.5]} />
       <pointLight color={"#002d45"} position={[0, 0.6, 0]} distance="1.5" />
       <OrbitControls enableZoom={false} enablePan={false} />
-      <primitive object={gltf.scene} scale={0.06} ref={ref} />
+      <primitive
+        object={gltf.scene}
+        position={[0, 2.5, 0]}
+        scale={0.06}
+        ref={ref}
+      />
     </>
   );
 };

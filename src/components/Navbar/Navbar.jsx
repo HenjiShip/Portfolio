@@ -10,7 +10,7 @@ const Navbar = ({ activePageId }) => {
 
   return (
     <div>
-      <div className="z-[99] fixed h-full w-44 bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-r-[50px] max-lg:hidden">
+      <div className="z-[99] fixed h-full w-44 bg-gray-800/5 backdrop-blur-md rounded-r-[50px] max-lg:hidden">
         <a
           onClick={() => handleNavLinkClick("home")}
           className="mt-4 text-white text-6xl font-bold flex justify-center items-center hover:cursor-pointer"
@@ -18,7 +18,7 @@ const Navbar = ({ activePageId }) => {
           H
         </a>
         <div className="flex flex-col h-full justify-center items-center">
-          <ul className="mt-[-200px]">
+          <ul className="mt-[-200px] caret-transparent">
             {navLinks.map((items) => (
               <li
                 key={items.id}
@@ -41,7 +41,7 @@ const Navbar = ({ activePageId }) => {
 
       {/* small screen navbar */}
 
-      <ul className="lg:hidden flex flex-row fixed bg-gray-800/5 backdrop-blur-sm h-[40px] w-full z-[50] items-center justify-center gap-x-4">
+      <ul className="lg:hidden flex flex-row fixed bg-gray-800/5 backdrop-blur-sm h-[40px] w-full z-[50] items-center justify-center gap-x-4 caret-transparent">
         <li
           className={`${
             activePageId === "about"

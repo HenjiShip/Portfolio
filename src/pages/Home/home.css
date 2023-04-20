@@ -1,5 +1,6 @@
 .canvas {
     display: block;
+    z-index: 5;
 }
 
 .moon {
@@ -10,11 +11,12 @@
     width: 200px;
     height: 200px;
     z-index: 1;
+    box-shadow: 2px 2px 10px black;
 }
 
 @media screen and (max-width: 640px) {
     .canvas {
-        height: 250px !important;
+        height: 500px !important;
         top: 150px;
         width: 100%;
         padding: 0px;
@@ -31,11 +33,178 @@
 @media screen and (max-width: 1024px) and (min-width: 641px) {
     .canvas {
         height: 600px !important;
+        top: 150px;
     }
 }
 
 @media screen and (min-width: 1025px) {
     .canvas {
         height: 800px !important;
+        top: 150px;
     }
 }
+
+.floating-diamonds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.diamond {
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(17% - 50px);
+    margin-top: -10px;
+    margin-left: -10px;
+    animation: float 20s ease-in-out infinite;
+    caret-color: transparent;
+    box-shadow: 2px 2px 10px black;
+}
+
+.diamond:nth-child(2) {
+    animation: float 14s ease-in-out infinite;
+    top: calc(25% - 50px);
+    left: calc(25% - 50px);
+    width: 6px;
+    height: 6px;
+}
+
+.diamond:nth-child(3) {
+    top: calc(60% - 50px);
+    left: calc(80% - 50px);
+    animation: float 21s ease-in-out infinite;
+    width: 7px;
+    height: 7px;
+}
+
+.diamond:nth-child(4) {
+    animation: float 20s ease-in-out infinite;
+    top: calc(46% - 50px);
+    left: calc(67% - 50px);
+    width: 8px;
+    height: 8px;
+}
+
+.diamond:nth-child(5) {
+    top: calc(40% - 50px);
+    left: calc(30% - 50px);
+    animation: float 16s ease-in-out infinite;
+    width: 4px;
+    height: 4px;
+}
+
+.diamond:nth-child(6) {
+    animation: float 19s ease-in-out infinite;
+    top: calc(85% - 50px);
+    left: calc(84% - 50px);
+    width: 10px;
+    height: 10px;
+}
+
+.diamond:nth-child(7) {
+    top: calc(20% - 50px);
+    left: calc(70% - 50px);
+    animation: float 15s ease-in-out infinite;
+    width: 10px;
+    height: 10px;
+}
+
+.diamond:nth-child(8) {
+    top: calc(15% - 50px);
+    left: calc(90% - 50px);
+    animation: float 17s ease-in-out infinite;
+    width: 3px;
+    height: 3px;
+}
+
+.diamond:nth-child(9) {
+    top: calc(85% - 50px);
+    left: calc(15% - 50px);
+    animation: float 17s ease-in-out infinite;
+    width: 3px;
+    height: 3px;
+}
+
+.diamond:nth-child(10) {
+    top: calc(15% - 50px);
+    left: calc(15% - 50px);
+    animation: float 17s ease-in-out infinite;
+    width: 7px;
+    height: 7px;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+
+
+    35% {
+        transform: translate(50px, 50px) rotate(110deg);
+    }
+
+    65% {
+        transform: translate(75px, 30px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* .floating-circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(17% - 50px);
+    width: 20px;
+    height: 20px;
+    transform: rotate(30deg);
+    background-color: white;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle:nth-child(2) {
+    top: calc(30% - 50px);
+    left: calc(50% - 50px);
+    width: 25px;
+    height: 25px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.circle:nth-child(3) {
+    top: calc(60% - 50px);
+    left: calc(80% - 50px);
+    width: 10px;
+    height: 10px;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+} */
