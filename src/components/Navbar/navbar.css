@@ -4,6 +4,6 @@
 
 @layer components {
     .nav-btn {
-        @apply py-2 font-bold lg:hover:text-white lg:hover:underline hover:underline-offset-8 hover:decoration-2 cursor-pointer transition-colors duration-500;
+        @apply py-2 font-bold lg:hover:text-white lg:hover:underline select-none hover:underline-offset-8 hover:decoration-2 cursor-pointer transition-colors duration-500;
     }
 }

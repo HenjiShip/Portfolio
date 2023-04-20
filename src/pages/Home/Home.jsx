@@ -9,12 +9,15 @@ const Home = () => {
       <div className=" h-[100px] b flex-1 pl-[100px] pt-20 pr-10 max-lg:pt-[100px] max-lg:pl-0 max-lg:pr-0 relative">
         <div className="flex flex-col items-center">
           <h1
-            className="text-6xl font-bold mb-4 max-sm:text-4xl z-[5]"
+            className="text-6xl font-bold mb-4 max-sm:text-4xl z-[5] select-none"
             style={{ textShadow: "5px 10px 13px black" }}
           >
             Hi, i'm Henry
           </h1>
-          <p className="z-[5]" style={{ textShadow: "5px 8px 6px black" }}>
+          <p
+            className="z-[5] select-none"
+            style={{ textShadow: "5px 8px 6px black" }}
+          >
             Full stack web developer
           </p>
         </div>
@@ -25,17 +28,17 @@ const Home = () => {
           <Room />
         </Canvas>
       </div>
-      <div class="floating-diamonds">
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
-        <div class="diamond"></div>
+      <div className="floating-diamonds">
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
+        <div className="diamond"></div>
       </div>
     </div>
   );

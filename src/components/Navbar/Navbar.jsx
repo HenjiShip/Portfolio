@@ -50,7 +50,7 @@ const Navbar = ({ activePageId }) => {
           } nav-btn`}
           onClick={() => handleNavLinkClick("about")}
         >
-          about
+          About
         </li>
         <li
           className={`${
@@ -60,7 +60,7 @@ const Navbar = ({ activePageId }) => {
           } nav-btn`}
           onClick={() => handleNavLinkClick("portfolio")}
         >
-          portfolio
+          Portfolio
         </li>
         <a
           onClick={() => handleNavLinkClick("home")}
@@ -76,7 +76,7 @@ const Navbar = ({ activePageId }) => {
           } nav-btn`}
           onClick={() => handleNavLinkClick("skills")}
         >
-          skills
+          Skills
         </li>
         <li
           className={`${
@@ -86,7 +86,7 @@ const Navbar = ({ activePageId }) => {
           } nav-btn`}
           onClick={() => handleNavLinkClick("contact")}
         >
-          contact
+          Contact
         </li>
       </ul>
     </div>

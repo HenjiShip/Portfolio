@@ -30,7 +30,14 @@
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 641px) {
+@media screen and (max-width: 640px) {
+    .canvas {
+        height: 300px !important;
+        top: 150px;
+    }
+}
+
+@media screen and (min-width: 641px) {
     .canvas {
         height: 600px !important;
         top: 150px;
