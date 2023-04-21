@@ -1,6 +1,7 @@
 import { navLinks } from "../../constants";
 import React from "react";
 import "./navbar.css";
+import { motion } from "framer-motion";
 
 const Navbar = ({ activePageId }) => {
   const handleNavLinkClick = (id) => {
@@ -10,7 +11,13 @@ const Navbar = ({ activePageId }) => {
 
   return (
     <div>
-      <div className="z-[99] fixed h-full w-44 bg-gray-800/5 backdrop-blur-md rounded-r-[50px] max-lg:hidden">
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 1 }}
+        viewport={{ once: true }}
+        className="z-[99] fixed h-full w-44 bg-gray-800/5 backdrop-blur-md rounded-r-[50px] max-lg:hidden"
+      >
         <a
           onClick={() => handleNavLinkClick("home")}
           className="mt-4 text-white text-6xl font-bold flex justify-center items-center hover:cursor-pointer select-none caret-transparent"
@@ -37,11 +44,17 @@ const Navbar = ({ activePageId }) => {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       {/* small screen navbar */}
 
-      <ul className="lg:hidden flex flex-row fixed bg-gray-800/5 backdrop-blur-sm h-[40px] w-full z-[50] items-center justify-center gap-x-4 caret-transparent">
+      <motion.ul
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1 }}
+        viewport={{ once: true }}
+        className="lg:hidden flex flex-row fixed bg-gray-800/5 backdrop-blur-sm h-[40px] w-full z-[50] items-center justify-center gap-x-4 caret-transparent"
+      >
         <li
           className={`${
             activePageId === "about"
@@ -88,7 +101,7 @@ const Navbar = ({ activePageId }) => {
         >
           Contact
         </li>
-      </ul>
+      </motion.ul>
     </div>
   );
 };

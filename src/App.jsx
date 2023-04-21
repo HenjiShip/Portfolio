@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Navbar, Footer, Loading } from "./components";
 import { Home, About, Contact, Skills, Portfolio } from "./pages";
+import { motion } from "framer-motion";
 
 const App = () => {
   const pages = [
@@ -46,15 +47,33 @@ const App = () => {
         <Navbar observerRefs={observerRefs} activePageId={activePageId} />
         <div>
           {/* set loading screen on the page if they're not loaded yet */}
-          {pages.map((page) => (
-            <div
-              key={page.id}
-              id={page.id}
-              ref={(ref) => (observerRefs.current[page.id] = ref)}
-            >
-              {page.component}
-            </div>
-          ))}
+          {pages.map((page, index) =>
+            index === 0 ? (
+              <motion.div
+                key={page.id}
+                id={page.id}
+                ref={(ref) => (observerRefs.current[page.id] = ref)}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                viewport={{ once: true }}
+              >
+                {page.component}
+              </motion.div>
+            ) : (
+              <motion.div
+                key={page.id}
+                id={page.id}
+                ref={(ref) => (observerRefs.current[page.id] = ref)}
+                initial={{ opacity: 0, y: 300 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+                viewport={{ once: true, amount: 0.4 }}
+              >
+                {page.component}
+              </motion.div>
+            )
+          )}
         </div>
         <Footer />
       </Suspense>

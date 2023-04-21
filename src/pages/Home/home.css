@@ -16,8 +16,8 @@
 
 @media screen and (max-width: 640px) {
     .canvas {
-        height: 500px !important;
-        top: 150px;
+        height: 400px !important;
+        top: 200px;
         width: 100%;
         padding: 0px;
         margin: 0px;
@@ -27,13 +27,6 @@
         height: 125px;
         width: 125px;
         top: 225px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .canvas {
-        height: 300px !important;
-        top: 150px;
     }
 }
 

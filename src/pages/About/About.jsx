@@ -18,7 +18,7 @@ const About = () => {
             blandit lobortis.
           </p>
         </div>
-        <div className="h-[500px]"></div>
+        <div className="h-[200px]"></div>
       </div>
     </div>
   );
