@@ -13,7 +13,7 @@ const Navbar = ({ activePageId }) => {
       <div className="z-[99] fixed h-full w-44 bg-gray-800/5 backdrop-blur-md rounded-r-[50px] max-lg:hidden">
         <a
           onClick={() => handleNavLinkClick("home")}
-          className="mt-4 text-white text-6xl font-bold flex justify-center items-center hover:cursor-pointer"
+          className="mt-4 text-white text-6xl font-bold flex justify-center items-center hover:cursor-pointer select-none caret-transparent"
         >
           H
         </a>

@@ -21,7 +21,7 @@ const Home = () => {
             Full stack web developer
           </p>
         </div>
-        <div className="animate-bounce moon" />
+        <div className="animate-bounce moon select-none" />
       </div>
       <div className="ml-[100px] h-[720px] sm:h-[720px] md:h-[875px] lg:h-[720px] relative max-lg:p-5 max-lg:ml-0">
         <Canvas camera={{ position: [2, 4, 5] }} className="canvas">
