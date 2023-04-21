@@ -43,25 +43,22 @@ const App = () => {
 
   return (
     <div>
-      {/* <Suspense fallback={<Loading />}> */}
       <Navbar observerRefs={observerRefs} activePageId={activePageId} />
       <div>
         {/* set loading screen on the page if they're not loaded yet */}
         {pages.map((page, index) =>
           index === 0 ? (
-            <Suspense fallback={<Loading />}>
-              <motion.div
-                key={page.id}
-                id={page.id}
-                ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {page.component}
-              </motion.div>
-            </Suspense>
+            <motion.div
+              key={page.id}
+              id={page.id}
+              ref={(ref) => (observerRefs.current[page.id] = ref)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              {page.component}
+            </motion.div>
           ) : (
             <motion.div
               key={page.id}
@@ -78,7 +75,6 @@ const App = () => {
         )}
       </div>
       <Footer />
-      {/* </Suspense> */}
     </div>
   );
 };
