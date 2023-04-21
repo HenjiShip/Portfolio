@@ -9,7 +9,7 @@ const Home = () => {
     <div className="h-[1080px]">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
         className="bg-gradient-to-b from-slate-800 to-[#1d1d1d]"
       >

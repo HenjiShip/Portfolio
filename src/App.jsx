@@ -42,24 +42,24 @@ const App = () => {
   }, [pages, observerRefs]);
 
   return (
-    <div>
-      {/* <Suspense fallback={<Loading />}> */}
-      <Navbar observerRefs={observerRefs} activePageId={activePageId} />
+    <Suspense fallback={<Loading />}>
       <div>
-        {/* set loading screen on the page if they're not loaded yet */}
-        {pages.map((page) => (
-          <motion.div
-            key={page.id}
-            id={page.id}
-            ref={(ref) => (observerRefs.current[page.id] = ref)}
-          >
-            {page.component}
-          </motion.div>
-        ))}
+        <Navbar observerRefs={observerRefs} activePageId={activePageId} />
+        <div>
+          {/* set loading screen on the page if they're not loaded yet */}
+          {pages.map((page) => (
+            <div
+              key={page.id}
+              id={page.id}
+              ref={(ref) => (observerRefs.current[page.id] = ref)}
+            >
+              {page.component}
+            </div>
+          ))}
+        </div>
+        <Footer />
       </div>
-      {/* </Suspense> */}
-      <Footer />
-    </div>
+    </Suspense>
   );
 };
 
