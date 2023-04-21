@@ -14,7 +14,6 @@ const App = () => {
 
   // set element id when scrolling for highlighted navbar
   const [activePageId, setActivePageId] = useState(pages[0].id);
-  const [opacity, setOpacity] = useState(0);
   const observerRefs = useRef([]);
 
   const observerCallback = (entries) => {
@@ -42,46 +41,23 @@ const App = () => {
     };
   }, [pages, observerRefs]);
 
-  useEffect(() => {
-    setOpacity(1);
-  }, []);
-
   return (
     <div>
-      <Suspense fallback={<Loading />}>
-        <Navbar observerRefs={observerRefs} activePageId={activePageId} />
-        <div>
-          {/* set loading screen on the page if they're not loaded yet */}
-          {pages.map((page, index) =>
-            index === 0 ? (
-              <motion.div
-                key={page.id}
-                id={page.id}
-                ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: opacity }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {page.component}
-              </motion.div>
-            ) : (
-              // when the page scrolls, it only loads in the page based on the intial view. I need to put this motion animation on an inner div so that the page will run the animation on the original location of the div rather than the "initial" location
-              <motion.div
-                key={page.id}
-                id={page.id}
-                ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: 0.01, y: 300 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                {page.component}
-              </motion.div>
-            )
-          )}
-        </div>
-      </Suspense>
+      {/* <Suspense fallback={<Loading />}> */}
+      <Navbar observerRefs={observerRefs} activePageId={activePageId} />
+      <div>
+        {/* set loading screen on the page if they're not loaded yet */}
+        {pages.map((page) => (
+          <motion.div
+            key={page.id}
+            id={page.id}
+            ref={(ref) => (observerRefs.current[page.id] = ref)}
+          >
+            {page.component}
+          </motion.div>
+        ))}
+      </div>
+      {/* </Suspense> */}
       <Footer />
     </div>
   );
