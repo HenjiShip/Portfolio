@@ -14,6 +14,7 @@ const App = () => {
 
   // set element id when scrolling for highlighted navbar
   const [activePageId, setActivePageId] = useState(pages[0].id);
+  const [opacity, setOpacity] = useState(0);
   const observerRefs = useRef([]);
 
   const observerCallback = (entries) => {
@@ -41,6 +42,10 @@ const App = () => {
     };
   }, [pages, observerRefs]);
 
+  useEffect(() => {
+    setOpacity(1);
+  }, []);
+
   return (
     <div>
       <Suspense fallback={<Loading />}>
@@ -53,7 +58,7 @@ const App = () => {
                 key={page.id}
                 id={page.id}
                 ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: 0.01 }}
+                initial={{ opacity: opacity }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 viewport={{ once: true }}
@@ -61,6 +66,7 @@ const App = () => {
                 {page.component}
               </motion.div>
             ) : (
+              // when the page scrolls, it only loads in the page based on the intial view. I need to put this motion animation on an inner div so that the page will run the animation on the original location of the div rather than the "initial" location
               <motion.div
                 key={page.id}
                 id={page.id}
