@@ -43,40 +43,40 @@ const App = () => {
 
   return (
     <div>
-      <Suspense fallback={<Loading />}>
-        <Navbar observerRefs={observerRefs} activePageId={activePageId} />
-        <div>
-          {/* set loading screen on the page if they're not loaded yet */}
-          {pages.map((page, index) =>
-            index === 0 ? (
-              <motion.div
-                key={page.id}
-                id={page.id}
-                ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {page.component}
-              </motion.div>
-            ) : (
-              <motion.div
-                key={page.id}
-                id={page.id}
-                ref={(ref) => (observerRefs.current[page.id] = ref)}
-                initial={{ opacity: 0, y: 300 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                {page.component}
-              </motion.div>
-            )
-          )}
-        </div>
-        <Footer />
-      </Suspense>
+      {/* <Suspense fallback={<Loading />}> */}
+      <Navbar observerRefs={observerRefs} activePageId={activePageId} />
+      <div>
+        {/* set loading screen on the page if they're not loaded yet */}
+        {pages.map((page, index) =>
+          index === 0 ? (
+            <motion.div
+              key={page.id}
+              id={page.id}
+              ref={(ref) => (observerRefs.current[page.id] = ref)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              {page.component}
+            </motion.div>
+          ) : (
+            <motion.div
+              key={page.id}
+              id={page.id}
+              ref={(ref) => (observerRefs.current[page.id] = ref)}
+              initial={{ opacity: 0, y: 300 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true, amount: 0.4 }}
+            >
+              {page.component}
+            </motion.div>
+          )
+        )}
+      </div>
+      <Footer />
+      {/* </Suspense> */}
     </div>
   );
 };
