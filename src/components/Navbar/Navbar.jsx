@@ -64,7 +64,7 @@ const Navbar = ({ activePageId }) => {
         </li>
         <a
           onClick={() => handleNavLinkClick("home")}
-          className="flex mt-4 text-white text-6xl font-bold justify-center items-center hover:cursor-pointer"
+          className="flex mt-4 text-white text-6xl font-bold justify-center items-center hover:cursor-pointer select-none caret-transparent"
         >
           H
         </a>
