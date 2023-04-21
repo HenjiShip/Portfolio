@@ -54,8 +54,8 @@ const App = () => {
                 id={page.id}
                 ref={(ref) => (observerRefs.current[page.id] = ref)}
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 1 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
                 viewport={{ once: true }}
               >
                 {page.component}
