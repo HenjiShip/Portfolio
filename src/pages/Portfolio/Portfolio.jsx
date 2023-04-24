@@ -22,10 +22,13 @@ const Portfolio = () => {
         >
           <div className="flex-1 pl-52 pt-20 pr-10 max-lg:p-2 max-w-screen-2xl">
             <div className="p-[50px] max-sm:p-[10px] bg-slate-900/50 backdrop-blur-md rounded-lg">
+              <h1
+                className="text-6xl font-bold mb-4 max-sm:text-4xl"
+                style={{ textShadow: "5px 10px 13px black" }}
+              >
+                Portfolio
+              </h1>
               <div>
-                <h1 className="text-6xl font-bold mb-4 max-sm:text-4xl">
-                  Portfolio
-                </h1>
                 <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 grid-cols-3 gap-10 place-items-center p-0">
                   <a
                     href="https://stickstock.netlify.app"

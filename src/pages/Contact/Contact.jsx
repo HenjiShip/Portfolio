@@ -14,10 +14,13 @@ const Contact = () => {
         <div className="flex-1 pl-52 pt-20 pr-10 max-lg:p-10 max-w-screen-2xl">
           <div className="grid gap-8 grid-cols-2 max-sm:grid-cols-1">
             <div>
-              <h1 className="text-6xl font-bold mb-4 max-sm:text-4xl">
+              <h1
+                className="text-6xl font-bold mb-4 max-sm:text-4xl"
+                style={{ textShadow: "5px 10px 13px black" }}
+              >
                 Contact
               </h1>
-              <p>
+              <p style={{ textShadow: "5px 10px 13px black" }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 ut luctus ex. Phasellus posuere turpis sed malesuada congue.
                 Nulla id tellus metus. Donec tristique lacus et eros rhoncus

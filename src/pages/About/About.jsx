@@ -12,8 +12,13 @@ const About = () => {
       >
         <div className="flex-1 pl-52 pr-10 max-lg:p-10 max-sm:pl-[10px] max-sm:pr-[10px] max-w-screen-2xl">
           <div className="p-[50px] max-sm:p-[20px] bg-slate-900/50 backdrop-blur-md rounded-lg h-[500px]">
-            <h1 className="text-6xl font-bold mb-4 max-sm:text-4xl">About</h1>
-            <p>
+            <h1
+              className="text-6xl font-bold mb-4 max-sm:text-4xl"
+              style={{ textShadow: "5px 10px 13px black" }}
+            >
+              About
+            </h1>
+            <p style={{ textShadow: "5px 10px 13px black" }}>
               I am a highly skilled Full Stack Web Developer with a Bachelor's
               degree in Computer Science. With a passion for problem-solving, I
               thrive in developing creative and innovative solutions for
