@@ -5,16 +5,18 @@ const Contact = () => {
   return (
     <div className="h-[1080px]">
       <motion.div
-        initial={{ opacity: 0.01, y: 300 }}
+        initial={{ opacity: 0, y: 300 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "spring", bounce: 0.4, duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
         className="flex items-center justify-center"
       >
         <div className="flex-1 pl-52 pt-20 pr-10 max-lg:p-10 max-w-screen-2xl">
           <div className="grid gap-8 grid-cols-2 max-sm:grid-cols-1">
             <div>
-              <h1 className="text-6xl font-bold mb-4">Contact</h1>
+              <h1 className="text-6xl font-bold mb-4 max-sm:text-4xl">
+                Contact
+              </h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 ut luctus ex. Phasellus posuere turpis sed malesuada congue.

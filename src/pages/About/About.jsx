@@ -2,30 +2,32 @@ import React from "react";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className="h-[1080px]">
+    <div className="h-[1080px] overflow-x-hidden pt-[100px] max-sm:pt-[30px]">
       <motion.div
-        initial={{ opacity: 0, y: 300 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-        viewport={{ once: true, amount: 0.2 }}
+        initial={{ opacity: 0, x: -300 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", bounce: 0.4, duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
         className="flex items-center justify-center"
       >
-        <div className="flex-1 pl-52 pt-[200px] pr-10 max-lg:p-10 max-sm:pt-[50px] max-sm:pl-[10px] max-sm:pr-[10px] max-w-screen-2xl">
-          <div className="bg-yellow-200/75 backdrop-blur-md p-[100px] rounded-xl h-[500px] font-col text-black max-sm:p-[10px]">
-            <h1 className="text-6xl font-bold mb-4">About</h1>
+        <div className="flex-1 pl-52 pr-10 max-lg:p-10 max-sm:pl-[10px] max-sm:pr-[10px] max-w-screen-2xl">
+          <div className="p-[50px] max-sm:p-[20px] bg-slate-900/50 backdrop-blur-md rounded-lg h-[500px]">
+            <h1 className="text-6xl font-bold mb-4 max-sm:text-4xl">About</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
-              luctus ex. Phasellus posuere turpis sed malesuada congue. Nulla id
-              tellus metus. Donec tristique lacus et eros rhoncus vestibulum.
-              Aliquam erat volutpat. Etiam ullamcorper sagittis tellus, vel
-              maximus ante vestibulum sit amet. Nulla volutpat felis nec leo
-              bibendum, sit amet fringilla eros porttitor. Sed faucibus, dolor
-              id euismod ullamcorper, velit mi euismod nibh, vitae bibendum
-              nulla lectus vel est. Morbi vel dignissim elit. Nam eget turpis ut
-              leo blandit lobortis.
+              I am a highly skilled Full Stack Web Developer with a Bachelor's
+              degree in Computer Science. With a passion for problem-solving, I
+              thrive in developing creative and innovative solutions for
+              clients. Additionally, I possesses an artistic side, which aids in
+              designing visually stunning websites and choosing color schemes
+              that are aesthetically pleasing. Over the past few months, I have
+              honed my expertise in back-end development, allowing me to be
+              well-equipped to tackle any project with confidence. With a wealth
+              of experience in web development, I am committed to delivering
+              high-quality work that exceeds client expectations. I am confident
+              in my dedication, combined with my technical expertise, would make
+              me an invaluable asset to any team.
             </p>
           </div>
-          <div className="h-[200px]"></div>
         </div>
       </motion.div>
     </div>

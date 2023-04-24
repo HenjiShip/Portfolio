@@ -25,7 +25,7 @@ export const navLinks = [
   },
   {
     id: "skills",
-    title: "Skills",
+    title: "Experience",
     icon: <IoBriefcaseOutline />,
   },
   {
