@@ -7,6 +7,11 @@ import {
   BsEnvelopeAt,
 } from "react-icons/all";
 
+import drizco from "../assets/images/drizco.png";
+import gluetube from "../assets/images/gluetube.png";
+import stickstock from "../assets/images/stickstock.png";
+import v1portfolio from "../assets/images/v1portfolio.png";
+
 export const navLinks = [
   {
     id: "home",
@@ -32,5 +37,32 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
     icon: <BsEnvelopeAt />,
+  },
+];
+
+export const portfolio = [
+  {
+    id: "stickstock",
+    title: "StickStock",
+    image: stickstock,
+    link: "https://stickstock.netlify.app",
+  },
+  {
+    id: "drizco",
+    title: "Drizco",
+    image: drizco,
+    link: "https://drizco.netlify.app",
+  },
+  {
+    id: "gluetube",
+    title: "Gluetube",
+    image: gluetube,
+    link: "https://gluetube.netlify.app",
+  },
+  {
+    id: "v1portfolio",
+    title: "V1 Portfolio",
+    image: v1portfolio,
+    link: "https://henryli-portfolio.netlify.app",
   },
 ];

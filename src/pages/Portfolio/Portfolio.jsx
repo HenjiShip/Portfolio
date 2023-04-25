@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import drizco from "../../assets/images/drizco.png";
-import gluetube from "../../assets/images/gluetube.png";
-import stickstock from "../../assets/images/stickstock.png";
+import { portfolio } from "../../constants";
+import "./portfolio.css";
 
 const Portfolio = () => {
   return (
-    <div className="h-[1080px] overflow-x-hidden pt-[100px] max-sm:pt-[30px]">
+    <div className="h-auto overflow-x-hidden max-sm:pt-[30px]">
       <div>
         <motion.div
           initial={{ opacity: 0, x: 300 }}
@@ -20,7 +19,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="flex items-center justify-center"
         >
-          <div className="flex-1 pl-52 pt-20 pr-10 max-lg:p-2 max-w-screen-2xl">
+          <div className="flex-1 pl-52 pt-20 pr-10 max-sm:p-[10px] max-md:p-[40px] lg:pl-52 max-lg:p-2 max-w-screen-2xl">
             <div className="p-[50px] max-sm:p-[10px] bg-slate-900/50 backdrop-blur-md rounded-lg">
               <h1
                 className="text-6xl font-bold mb-4 max-sm:text-4xl"
@@ -29,25 +28,83 @@ const Portfolio = () => {
                 Portfolio
               </h1>
               <div>
-                <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 grid-cols-3 gap-10 place-items-center p-0">
-                  <a
-                    href="https://stickstock.netlify.app"
-                    className="relative flex h-[200px] w-11/12 rounded-lg overflow-hidden"
-                    target="_blank"
-                  >
-                    <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10">
-                      <h2 className="text-2xl font-bold text-white p-[5px]">
-                        StickStock
-                      </h2>
+                <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-2 place-items-center p-0">
+                  {portfolio.map((project) => (
+                    <div class="maincontainer flex justify-center">
+                      <div class="back">
+                        <h2>{project.title}</h2>
+                        <p>
+                          Introduction to Copywriting’ workshop focuses on the
+                          theory and processes of professional copywriting as
+                          applied to persuasion, reasoning, and rhetoric. This
+                          workshop is best-suited to learning how to write and
+                          think about consumer-driven functions.
+                          <div className="p-[10px]">
+                            <button className="p-[5px] border-solid border-2 rounded-md">
+                              <a href={project.link}>Demo</a>
+                            </button>
+                            <button className="p-[5px] border-solid border-2 ml-[10px] rounded-md">
+                              <a href={project.link}>Code</a>
+                            </button>
+                          </div>
+                        </p>
+                      </div>
+                      <div class="front bg-zinc-600/25 rounded-2xl">
+                        <div class="image">
+                          <img src={project.image} />
+                          <h2>{project.title}</h2>
+                        </div>
+                      </div>
                     </div>
-                    <img
-                      src={stickstock}
-                      className="object-cover h-[300px] w-[600px]"
-                    />
-                  </a>
-                  <a
-                    href="https://drizco.netlify.app"
-                    className="relative flex h-[200px] w-11/12 rounded-lg overflow-hidden"
+                  ))}
+                </div>
+                <div className="max-sm:h-[40px]" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <div className="h-[100px]" />
+      </div>
+    </div>
+  );
+};
+
+// <a
+//   href={project.link}
+//   className="relative flex h-[200px] lg:h-[300px] w-11/12 rounded-lg overflow-hidden border-solid border-4 border-zinc-500 shadow-xl"
+//   target="_blank"
+// >
+//   <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10 ">
+//     <h2 className="text-2xl font-bold text-white p-[5px]">
+//       {project.title}
+//     </h2>
+//   </div>
+//   <img
+//     src={project.image}
+//     className="object-cover h-[300px] w-[600px]"
+//   />
+// </a>
+{
+  /* <a
+  href="https://stickstock.netlify.app"
+  className="relative flex h-[200px] lg:h-[300px] w-11/12 rounded-lg overflow-hidden border-solid border-4 border-zinc-500"
+  target="_blank"
+>
+  <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10 ">
+    <h2 className="text-2xl font-bold text-white p-[5px]">
+      StickStock
+    </h2>
+  </div>
+  <img
+    src={stickstock}
+    className="object-cover h-[300px] w-[600px]"
+  />
+</a> */
+}
+{
+  /* <a
+  href="https://drizco.netlify.app"
+                    className="relative flex h-[200px] lg:h-[300px] w-11/12 rounded-lg overflow-hidden"
                     target="_blank"
                   >
                     <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10">
@@ -62,7 +119,7 @@ const Portfolio = () => {
                   </a>
                   <a
                     href="https://gluetube.netlify.app"
-                    className="relative flex h-[200px] w-11/12 rounded-lg overflow-hidden"
+                    className="relative flex h-[200px] lg:h-[300px] w-11/12 rounded-lg overflow-hidden"
                     target="_blank"
                   >
                     <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10">
@@ -75,15 +132,21 @@ const Portfolio = () => {
                       className="object-cover h-[300px] w-[600px]"
                     />
                   </a>
-                </div>
-                <div className="max-sm:h-[40px]" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
+                  <a
+                    href="https://henryli-portfolio.netlify.app"
+                    className="relative flex h-[200px] lg:h-[300px] w-11/12 rounded-lg overflow-hidden"
+                    target="_blank"
+                  >
+                    <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-zinc-900 z-10">
+                      <h2 className="text-2xl font-bold text-white p-[5px]">
+                        V1 Portfolio
+                      </h2>
+                    </div>
+                    <img
+                      src={v1portfolio}
+                      className="object-cover h-[300px] w-[600px]"
+                    />
+                  </a> */
+}
 
 export default Portfolio;

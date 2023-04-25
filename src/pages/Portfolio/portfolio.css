@@ -1,0 +1,81 @@
+.maincontainer {
+    width: 100%;
+    height: 299px;
+    margin: 10px;
+    float: left;
+    /* stack each div horizontally */
+}
+
+img {
+    border-radius: 10px;
+}
+
+.back h2 {
+    position: absolute;
+}
+
+.back p {
+    position: absolute;
+    top: 50px;
+    font-size: 15px;
+}
+
+.front h2 {
+    position: absolute;
+    padding: 10px;
+    top: 180px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* styling .front child within maincontainer parent */
+.maincontainer>.front {
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+
+    width: 350px;
+    height: auto;
+
+    backface-visibility: hidden;
+    border: 5px solid gray;
+    box-shadow: 10px 10px 10px black;
+    /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer>.back {
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: #fff;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden;
+    border: 5px solid gray;
+    box-shadow: 10px 10px 8px black;
+    /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+@media only screen and (max-width: 320px) {
+    .maincontainer>.front {
+        width: 270px;
+    }
+
+    .maincontainer>.back {
+        width: 270px;
+    }
+}
+
+
+
+.maincontainer:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
