@@ -28,7 +28,7 @@ const Portfolio = () => {
                 Portfolio
               </h1>
               <div>
-                <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-2 place-items-center p-0">
+                <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-2 place-items-center p-0">
                   {portfolio.map((project) => (
                     <div class="maincontainer flex justify-center">
                       <div class="back">
@@ -41,11 +41,17 @@ const Portfolio = () => {
                           think about consumer-driven functions.
                           <div className="p-[10px]">
                             <button className="p-[5px] border-solid border-2 rounded-md">
-                              <a href={project.link}>Demo</a>
+                              <a target="_blank" href={project.link}>
+                                Demo
+                              </a>
                             </button>
-                            <button className="p-[5px] border-solid border-2 ml-[10px] rounded-md">
-                              <a href={project.link}>Code</a>
-                            </button>
+                            {project.code && (
+                              <button className="p-[5px] border-solid border-2 ml-[10px] rounded-md">
+                                <a target="_blank" href={project.code}>
+                                  Code
+                                </a>
+                              </button>
+                            )}
                           </div>
                         </p>
                       </div>

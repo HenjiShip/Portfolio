@@ -46,18 +46,21 @@ export const portfolio = [
     title: "StickStock",
     image: stickstock,
     link: "https://stickstock.netlify.app",
+    code: "https://github.com/HenjiShip/StickStock",
   },
   {
     id: "drizco",
     title: "Drizco",
     image: drizco,
     link: "https://drizco.netlify.app",
+    code: "https://github.com/HenjiShip/Ecommerce",
   },
   {
     id: "gluetube",
     title: "Gluetube",
     image: gluetube,
     link: "https://gluetube.netlify.app",
+    code: "https://github.com/HenjiShip/Youtube-Clone",
   },
   {
     id: "v1portfolio",
