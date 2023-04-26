@@ -1,7 +1,51 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        "template_uspqde5",
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast("Email Sent!", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          toast("Failed to send email.", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      );
+  };
+
   return (
     <div className="h-[880px] bg-[#1d1d1d]">
       <motion.div
@@ -20,41 +64,51 @@ const Contact = () => {
               >
                 Contact
               </h1>
-              <p style={{ textShadow: "5px 10px 13px black" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                ut luctus ex. Phasellus posuere turpis sed malesuada congue.
-                Nulla id tellus metus. Donec tristique lacus et eros rhoncus
-                vestibulum. Aliquam erat volutpat. Etiam ullamcorper sagittis
-                tellus, vel maximus ante vestibulum sit amet. Nulla volutpat
-                felis nec leo bibendum, sit amet fringilla eros porttitor. Sed
-                faucibus, dolor id euismod ullamcorper, velit mi euismod nibh,
-                vitae bibendum nulla lectus vel est. Morbi vel dignissim elit.
-                Nam eget turpis ut leo blandit lobortis.
-              </p>
+              <span style={{ textShadow: "5px 10px 13px black" }}>
+                <p>
+                  Services: creating full stack websites using React, Nodejs and
+                  MongoDB or Sanity
+                </p>
+                <br />
+                <p>You can also contact me for my resume.</p>
+                <ToastContainer />
+              </span>
             </div>
             <div>
-              <form className="flex flex-col gap-4">
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="flex flex-col gap-4"
+              >
                 <input
                   type="text"
                   id="name"
                   name="name"
                   placeholder="name"
                   className="p-3 rounded-md text-gray-100 bg-gray-900 drop-shadow-lg"
-                ></input>
+                  required
+                />
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="email@email.com"
                   className="p-3 rounded-md text-gray-100 bg-gray-900 drop-shadow-lg"
-                ></input>
+                  required
+                />
                 <textarea
                   id="message"
                   name="message"
                   placeholder="message"
                   rows="10"
                   className="p-3 rounded-md text-gray-100 bg-gray-900 drop-shadow-lg"
-                ></textarea>
+                  required
+                />
+                <input
+                  type="submit"
+                  value="Send"
+                  className="p-[10px] bg-slate-900 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400"
+                />
               </form>
             </div>
           </div>

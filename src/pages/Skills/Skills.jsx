@@ -15,12 +15,17 @@ const Skills = () => {
         <div className="flex-1 pl-52 pr-10 max-lg:p-10 max-sm:p-[10px] max-w-screen-2xl">
           <div className="p-[50px] max-sm:p-[20px] bg-slate-900/50 backdrop-blur-md rounded-lg">
             <div>
-              <h1
-                className="text-6xl font-bold mb-4 max-sm:text-4xl"
-                style={{ textShadow: "5px 10px 13px black" }}
-              >
-                Experience
-              </h1>
+              <div className="flex justify-center">
+                <h1
+                  className="text-6xl font-bold mb-4 max-sm:text-4xl"
+                  style={{ textShadow: "5px 10px 13px black" }}
+                >
+                  Experience
+                </h1>
+              </div>
+              <div className="flex justify-center pb-[30px]">
+                <div className="h-[5px] w-3/12 bg-white" />
+              </div>
               <div className="absolute h-[75%] w-[3px] bg-gradient-to-b from-gray-700 to-transparent"></div>
               <ol className="relative">
                 <li className="mb-10 ml-6">
@@ -52,10 +57,16 @@ const Skills = () => {
                     className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veniam voluptas magnam, animi laboriosam similique voluptate
-                    natus, reiciendis distinctio nemo odio veritatis explicabo,
-                    aliquid ipsam? Eaque est aperiam temporibus molestias atque!
+                    Learned industry standards like technologies used and
+                    workflow. Participated in weekly meetings and helped develop
+                    a fan game that can be demo'd{" "}
+                    <a
+                      className="text-blue-300 hover:text-blue-100"
+                      target="_blank"
+                      href="https://sesameworm.netlify.app"
+                    >
+                      here
+                    </a>
                   </p>
                 </li>
                 <li className="mb-10 ml-6">
@@ -78,10 +89,8 @@ const Skills = () => {
                     className="text-base font-normal text-gray-500 dark:text-gray-400"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veniam voluptas magnam, animi laboriosam similique voluptate
-                    natus, reiciendis distinctio nemo odio veritatis explicabo,
-                    aliquid ipsam? Eaque est aperiam temporibus molestias atque!
+                    Looked at various code and assisted solving coding problems
+                    from websites like leetcode
                   </p>
                 </li>
                 <li className="ml-6">
@@ -104,10 +113,16 @@ const Skills = () => {
                     className="text-base font-normal text-gray-500 dark:text-gray-400"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veniam voluptas magnam, animi laboriosam similique voluptate
-                    natus, reiciendis distinctio nemo odio veritatis explicabo,
-                    aliquid ipsam? Eaque est aperiam temporibus molestias atque!
+                    Worked with a small team of fellow student developers to
+                    create a react application that uses{" "}
+                    <a
+                      className="text-blue-300 hover:text-blue-100"
+                      target="_blank"
+                      href="https://developers.themoviedb.org/3"
+                    >
+                      The Movie Database API
+                    </a>{" "}
+                    to search for movies and it's corresponding information.
                   </p>
                 </li>
               </ol>

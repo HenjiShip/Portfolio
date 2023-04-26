@@ -22,12 +22,18 @@ const Portfolio = () => {
         >
           <div className="flex-1 pl-52 pt-20 pr-10 max-sm:p-[10px] max-lg:p-[40px] lg:pl-52 max-w-screen-2xl">
             <div className="p-[50px] max-sm:p-[10px] bg-slate-900/50 backdrop-blur-md rounded-lg">
-              <h1
-                className="text-6xl font-bold mb-4 max-sm:text-4xl"
-                style={{ textShadow: "5px 10px 13px black" }}
-              >
-                Portfolio
-              </h1>
+              <div className="flex justify-center">
+                <h1
+                  className="text-6xl font-bold mb-4 max-sm:text-4xl"
+                  style={{ textShadow: "5px 10px 13px black" }}
+                >
+                  Portfolio
+                </h1>
+              </div>
+              <div className="flex justify-center pb-[30px]">
+                <div className="h-[5px] w-3/12 bg-white" />
+              </div>
+
               <div>
                 <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-2 place-items-center p-0">
                   {portfolio.map((project) => (
