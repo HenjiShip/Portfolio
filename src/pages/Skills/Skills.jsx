@@ -92,7 +92,7 @@ const Skills = () => {
                     className="mb-1 text-lg font-semibold"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    Flowbite Library v1.2.2
+                    CUNY 2X Tech Talent Pipeline
                   </h3>
                   <time
                     className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"

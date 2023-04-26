@@ -39,12 +39,29 @@ const About = () => {
                   in back-end development, allowing me to be well-equipped to
                   tackle any project with confidence. With a wealth of
                   experience in web development, I am committed to delivering
-                  high-quality work that exceeds client expectations. I am
-                  confident in my dedication, combined with my technical
-                  expertise, would make me an invaluable asset to any team.
+                  high-quality work that exceeds client expectations.
                 </p>
               </div>
-              
+              <div className="flex justify-center items-center">
+                <div className="gallery">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
+                    alt="a dream catcher"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/hevo/image/upload/v1626694700/hevo-blog/MongoDB-sm-logo-500x400-1-1.gif"
+                    alt="a piano"
+                  />
+                  <img
+                    src="https://pbs.twimg.com/card_img/1646793457577480194/DLvzDNz6?format=png&name=medium"
+                    alt="a live concert"
+                  />
+                  <img
+                    src="https://scontent-lga3-1.xx.fbcdn.net/v/t31.18172-8/26850584_10156186800336579_1585065027752569016_o.jpg?stp=dst-jpg_p180x540&_nc_cat=102&ccb=1-7&_nc_sid=8631f5&_nc_ohc=EtwURq2UP9cAX_hvms5&_nc_ht=scontent-lga3-1.xx&oh=00_AfC-DyJNXR8B2weIkSdXei-napmJE-UtpQe5th9xPVmBXA&oe=6470E5A9"
+                    alt="Paris"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>

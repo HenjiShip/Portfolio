@@ -21,12 +21,6 @@ const Room = () => {
       <spotLight position={[5, 10, 7.5]} />
       <spotLight position={[-3, 10, -7.5]} />
       <pointLight color={"#002d45"} position={[0, 0.6, 0]} distance="1.5" />
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        minPolarAngle={Math.PI / 10}
-        maxPolarAngle={Math.PI / 3}
-      />
       <primitive
         object={gltf.scene}
         position={[0, 2.5, 0]}
