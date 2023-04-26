@@ -47,6 +47,8 @@ export const portfolio = [
     image: stickstock,
     link: "https://stickstock.netlify.app",
     code: "https://github.com/HenjiShip/StickStock",
+    description:
+      "This is a CRUD website where the UI is modeled after Tiktok's UI. It supports user authentication through google's auth. This application can also track user's likes and posts. Technologies like React, Express, and MongoDB are used in this project.",
   },
   {
     id: "drizco",
@@ -54,6 +56,8 @@ export const portfolio = [
     image: drizco,
     link: "https://drizco.netlify.app",
     code: "https://github.com/HenjiShip/Ecommerce",
+    description:
+      "An ecommerce website that uses Sanity, a headless CMS so users can easily create and remove items on sale. Stripe for payment and uses https only cookies for cart data for each user. Uses serverless functions to send data from the client to the database.",
   },
   {
     id: "gluetube",
@@ -61,11 +65,15 @@ export const portfolio = [
     image: gluetube,
     link: "https://gluetube.netlify.app",
     code: "https://github.com/HenjiShip/Youtube-Clone",
+    description:
+      "Uses YoutubeV3 rapidAPI to imitate video playing functions that youtube offers. Features a search bar, comments, video categories, and related youtube videos.",
   },
   {
     id: "v1portfolio",
     title: "V1 Portfolio",
     image: v1portfolio,
     link: "https://henryli-portfolio.netlify.app",
+    description:
+      "A simple portfolio website that has Emailjs allowing users to send emails to me.",
   },
 ];

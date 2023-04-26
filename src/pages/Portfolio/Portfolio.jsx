@@ -5,7 +5,8 @@ import "./portfolio.css";
 
 const Portfolio = () => {
   return (
-    <div className="h-auto overflow-x-hidden max-sm:pt-[30px]">
+    <div className="h-auto overflow-x-hidden max-sm:pt-[30px] bg-[#1d1d1d]">
+      <div className="h-[50px]" />
       <div>
         <motion.div
           initial={{ opacity: 0, x: 300 }}
@@ -19,7 +20,7 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="flex items-center justify-center"
         >
-          <div className="flex-1 pl-52 pt-20 pr-10 max-sm:p-[10px] max-md:p-[40px] lg:pl-52 max-lg:p-2 max-w-screen-2xl">
+          <div className="flex-1 pl-52 pt-20 pr-10 max-sm:p-[10px] max-lg:p-[40px] lg:pl-52 max-w-screen-2xl">
             <div className="p-[50px] max-sm:p-[10px] bg-slate-900/50 backdrop-blur-md rounded-lg">
               <h1
                 className="text-6xl font-bold mb-4 max-sm:text-4xl"
@@ -30,15 +31,14 @@ const Portfolio = () => {
               <div>
                 <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-2 place-items-center p-0">
                   {portfolio.map((project) => (
-                    <div class="maincontainer flex justify-center">
-                      <div class="back">
+                    <div
+                      key={project.id}
+                      className="maincontainer flex justify-center"
+                    >
+                      <div className="back">
                         <h2>{project.title}</h2>
-                        <p>
-                          Introduction to Copywriting’ workshop focuses on the
-                          theory and processes of professional copywriting as
-                          applied to persuasion, reasoning, and rhetoric. This
-                          workshop is best-suited to learning how to write and
-                          think about consumer-driven functions.
+                        <span>
+                          {project.description}
                           <div className="p-[10px]">
                             <button className="p-[5px] border-solid border-2 rounded-md">
                               <a target="_blank" href={project.link}>
@@ -53,10 +53,10 @@ const Portfolio = () => {
                               </button>
                             )}
                           </div>
-                        </p>
+                        </span>
                       </div>
-                      <div class="front bg-zinc-600/25 rounded-2xl">
-                        <div class="image">
+                      <div className="front bg-zinc-600/25 rounded-2xl">
+                        <div className="image">
                           <img src={project.image} />
                           <h2>{project.title}</h2>
                         </div>

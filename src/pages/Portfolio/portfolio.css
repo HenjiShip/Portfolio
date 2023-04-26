@@ -14,10 +14,11 @@ img {
     position: absolute;
 }
 
-.back p {
+.back span {
     position: absolute;
     top: 50px;
     font-size: 15px;
+    text-shadow: 3px 3px 5px black;
 }
 
 .front h2 {
@@ -50,7 +51,7 @@ img {
     background: #262626;
     color: #fff;
     width: 350px;
-    height: 250px;
+    height: 260px;
     border-radius: 10px;
     padding: 5px;
     backface-visibility: hidden;
@@ -60,7 +61,7 @@ img {
     transition: transform .5s linear 0s;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
     .maincontainer>.front {
         width: 270px;
     }

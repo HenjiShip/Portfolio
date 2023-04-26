@@ -4,7 +4,7 @@ import { SlCalender } from "react-icons/all";
 
 const Skills = () => {
   return (
-    <div className="h-[1080px] overflow-x-hidden pt-[100px] max-sm:pt-[30px]">
+    <div className="h-[1080px] lg:h-[950px] overflow-x-hidden pt-[100px] max-sm:pt-[30px] bg-[#1d1d1d]">
       <motion.div
         initial={{ opacity: 0, x: -300 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -25,7 +25,10 @@ const Skills = () => {
               <ol className="relative">
                 <li className="mb-10 ml-6">
                   <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3">
-                    <SlCalender className="w-[25px] h-[25px]" style={{ textShadow: "5px 10px 13px black" }}/>
+                    <SlCalender
+                      className="w-[25px] h-[25px]"
+                      style={{ textShadow: "5px 10px 13px black" }}
+                    />
                   </span>
                   <h3
                     className="flex items-center mb-1 text-lg font-semibold"
