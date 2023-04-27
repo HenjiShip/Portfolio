@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { SlCalender } from "react-icons/all";
+import { SlCalender, AiOutlineStar } from "react-icons/all";
 
 const Skills = () => {
   return (
@@ -44,22 +44,22 @@ const Skills = () => {
                       className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3"
                       style={{ textShadow: "5px 10px 13px black" }}
                     >
-                      Latest
+                      <AiOutlineStar />
                     </span>
                   </h3>
                   <time
                     className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    January 13th, 2022
+                    June 2022 to August 2022
                   </time>
                   <p
                     className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
                     Learned industry standards like technologies used and
-                    workflow. Participated in weekly meetings and helped develop
-                    a fan game that can be demo'd{" "}
+                    workflow. Participated in weekly meetings and assisted in
+                    developing a fan game that can be demo'd{" "}
                     <a
                       className="text-blue-300 hover:text-blue-100"
                       target="_blank"
@@ -77,37 +77,13 @@ const Skills = () => {
                     className="mb-1 text-lg font-semibold"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    CUNY: College Assistant
-                  </h3>
-                  <time
-                    className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-                    style={{ textShadow: "5px 10px 13px black" }}
-                  >
-                    December 7th, 2021
-                  </time>
-                  <p
-                    className="text-base font-normal text-gray-500 dark:text-gray-400"
-                    style={{ textShadow: "5px 10px 13px black" }}
-                  >
-                    Looked at various code and assisted solving coding problems
-                    from websites like leetcode
-                  </p>
-                </li>
-                <li className="ml-6">
-                  <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3">
-                    <SlCalender className="w-[25px] h-[25px]" />
-                  </span>
-                  <h3
-                    className="mb-1 text-lg font-semibold"
-                    style={{ textShadow: "5px 10px 13px black" }}
-                  >
                     CUNY 2X Tech Talent Pipeline
                   </h3>
                   <time
                     className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
                     style={{ textShadow: "5px 10px 13px black" }}
                   >
-                    December 2nd, 2021
+                    October 2022 to December 2022
                   </time>
                   <p
                     className="text-base font-normal text-gray-500 dark:text-gray-400"
@@ -123,6 +99,31 @@ const Skills = () => {
                       The Movie Database API
                     </a>{" "}
                     to search for movies and it's corresponding information.
+                  </p>
+                </li>
+                <li className="ml-6 mb-10">
+                  <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3">
+                    <SlCalender className="w-[25px] h-[25px]" />
+                  </span>
+                  <h3
+                    className="mb-1 text-lg font-semibold"
+                    style={{ textShadow: "5px 10px 13px black" }}
+                  >
+                    NASA Space Grant Intern
+                  </h3>
+                  <time
+                    className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                    style={{ textShadow: "5px 10px 13px black" }}
+                  >
+                    November 2021 to December 2021
+                  </time>
+                  <p
+                    className="text-base font-normal text-gray-500 dark:text-gray-400"
+                    style={{ textShadow: "5px 10px 13px black" }}
+                  >
+                    Assessing Citizen Science Labeling to Improve Training Data
+                    Quality for Land Cover Protocols within the GLOBE Observer
+                    Community.
                   </p>
                 </li>
               </ol>
