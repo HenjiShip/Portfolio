@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/all";
 
 const Contact = () => {
   const form = useRef();
@@ -73,6 +74,18 @@ const Contact = () => {
                 <p>You can also contact me for my resume.</p>
                 <ToastContainer />
               </span>
+              <div className="flex py-[50px] lg:hidden">
+                <div className="p-[10px]">
+                  <a href="https://www.linkedin.com/in/henji/" target="_blank">
+                    <AiFillLinkedin className="icons-react" />
+                  </a>
+                </div>
+                <div className="p-[10px]">
+                  <a href="https://github.com/HenjiShip" target="_blank">
+                    <AiFillGithub className="icons-react" />
+                  </a>
+                </div>
+              </div>
             </div>
             <div>
               <form

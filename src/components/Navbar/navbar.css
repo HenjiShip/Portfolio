@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.icons-react {
+    width: 35px;
+    height: 35px;
+    z-index: 50;
+    color: #636363;
+    cursor: pointer;
+}
+
+.icons-react:hover {
+    color: #f9ff59;
+}
+
 @layer components {
     .nav-btn {
         @apply py-2 font-bold lg:hover:text-white lg:hover:underline select-none hover:underline-offset-8 hover:decoration-2 cursor-pointer transition-colors duration-500;

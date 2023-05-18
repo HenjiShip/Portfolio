@@ -2,6 +2,7 @@ import { navLinks } from "../../constants";
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import { motion } from "framer-motion";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/all";
 
 const Navbar = ({ activePageId, loaded }) => {
   const handleNavLinkClick = (id) => {
@@ -42,6 +43,18 @@ const Navbar = ({ activePageId, loaded }) => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="absolute left-[71%] top-[87%] z-50">
+          <div className="py-[10px]">
+            <a href="https://www.linkedin.com/in/henji/" target="_blank">
+              <AiFillLinkedin className="icons-react" />
+            </a>
+          </div>
+          <div className="py-[10px]">
+            <a href="https://github.com/HenjiShip" target="_blank">
+              <AiFillGithub className="icons-react" />
+            </a>
+          </div>
         </div>
       </motion.div>
 

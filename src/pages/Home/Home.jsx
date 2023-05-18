@@ -3,6 +3,7 @@ import Room from "./Room";
 import { Canvas } from "@react-three/fiber";
 import "./home.css";
 import { motion } from "framer-motion";
+import { AiFillGithub } from "react-icons/all";
 
 const Home = () => {
   return (
