@@ -57,7 +57,7 @@ export const portfolio = [
     link: "https://drizco.netlify.app",
     code: "https://github.com/HenjiShip/Ecommerce",
     description:
-      "An ecommerce website that uses Sanity, a headless CMS so users can easily create and remove items on sale. Stripe for payment and uses https only cookies for cart data for each user. Uses serverless functions to send data from the client to the database.",
+      "An ecommerce website that uses Sanity, a headless CMS. Stripe for payment and uses https only cookies for cart data for each user. Uses serverless functions. This also takes a second for serverless spin up, refresh page on logging in.",
   },
   {
     id: "gluetube",
