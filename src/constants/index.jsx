@@ -10,7 +10,7 @@ import {
 import drizco from "../assets/images/drizco.png";
 import gluetube from "../assets/images/gluetube.png";
 import stickstock from "../assets/images/stickstock.png";
-import v1portfolio from "../assets/images/v1portfolio.png";
+import chateth from "../assets/images/chateth.png";
 
 export const navLinks = [
   {
@@ -69,11 +69,11 @@ export const portfolio = [
       "Uses YoutubeV3 rapidAPI to imitate video playing functions that youtube offers. Features a search bar, comments, video categories, and related youtube videos.",
   },
   {
-    id: "v1portfolio",
-    title: "V1 Portfolio",
-    image: v1portfolio,
-    link: "https://henryli-portfolio.netlify.app",
+    id: "chateth",
+    title: "Chateth",
+    image: chateth,
+    link: "https://chateth.netlify.app/",
     description:
-      "A simple portfolio website that has Emailjs allowing users to send emails to me.",
+      "A Persona 5 inspired message application that's deployed with Vite, React, and uses Firebase for real time data storage. Unfinished, but will be finished soon!",
   },
 ];
