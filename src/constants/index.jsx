@@ -74,6 +74,6 @@ export const portfolio = [
     image: chateth,
     link: "https://chateth.netlify.app/",
     description:
-      "A Persona 5 inspired message application that's deployed with Vite, React, and uses Firebase for real time data storage. Unfinished, but will be finished soon!",
+      "A Persona 5 inspired message application that's deployed with Vite, React, and uses Firebase for real time data storage. Only has basic chat functionality for now, but more will be added soon!",
   },
 ];
