@@ -20,7 +20,7 @@ const Home = () => {
               className="text-6xl font-bold mb-4 max-sm:text-4xl z-[5] select-none"
               style={{ textShadow: "5px 10px 13px black" }}
             >
-              Hi, i'm Henry
+              Hi, I'm Henry
             </h1>
             <p
               className="z-[5] select-none"
